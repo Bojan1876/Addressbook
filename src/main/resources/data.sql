@@ -1,0 +1,13 @@
+insert into person(id, first_Name, last_Name) values(1, 'Bojan', 'Martinovic');
+insert into person(id, first_Name, last_Name) values(2, 'Ocko', 'fsdf');
+insert into person(id, first_Name, last_Name) values(3, 'Cosko', 'gbd');
+insert into person(id, first_Name, last_Name) values(4, 'NIgor', 'nhnghn');
+insert into PHONE(personid, number) 	values(1, '98420384923');
+insert into PHONE(personid, number)	values(1, '98420384923');
+insert into PHONE(personid, number)	values(1, '98420384923');
+insert into PHONE(personid, number)	values(2, '98420384923');
+insert into PHONE(personid, number)	values(2, '98420384923');
+insert into PHONE(personid, number)	values(3, '98420384923');
+insert into PHONE(personid, number)	values(4, '98420384923');
+insert into PHONE(personid, number)	values(4, '98420384923');
+insert into PHONE(personid, number)	values(4, '98420384923');
