@@ -19,12 +19,12 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Phone {
+public class Note {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
-	private String number;
+	private String note;
 
 	@ManyToOne
 	@JoinColumn(name = "PERSONID")
@@ -37,6 +37,6 @@ public class Phone {
 
 	@Override
 	public String toString() {
-		return number + "\n";
+		return note + "\n";
 	}
 }

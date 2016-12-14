@@ -1,6 +1,5 @@
 package com.bojan.addressbook.model;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -21,38 +20,26 @@ import lombok.Setter;
 @AllArgsConstructor
 @Entity
 public class Person {
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-
 	private Long id;
 
 	private String firstName;
 
 	private String lastName;
 
-	@OneToMany(mappedBy = "person", fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "person")
 	private List<Phone> phones;
+	
+	@OneToMany(mappedBy = "person")
+	private List<Email> emails;
+	
+	@OneToMany(mappedBy = "person")
+	private List<Address> addresses;
+	
+	@OneToMany(mappedBy = "person")
+	private List<Note> notes;
 
-	/*public Person() {
-	}
-
-	public Person(Long id, String firstName, String lastName) {
-		this.id = id;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		phones = new ArrayList<>();
-	}
-*/
-	@Override
-	public String toString() {
-		String res = "Person: " + id + " " + firstName + " " + lastName + "\n ";
-		if (phones != null) {
-			for (Phone num : phones) {
-				res += "Phone:" + num.getNumber() + "\n";
-			}
-		}
-		return res;
-	}
+	
 
 }

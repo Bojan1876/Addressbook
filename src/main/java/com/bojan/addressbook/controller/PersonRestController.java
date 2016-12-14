@@ -10,16 +10,12 @@ import com.bojan.addressbook.model.Person;
 import com.bojan.addressbook.repository.PersonRepository;
 
 @RestController
-public class PersonController {
-	
-	@RequestMapping("/persons")
-	List<Person> persons(){
-		return personRepository.findAll();
-		
-	}
-
+public class PersonRestController {
 	@Autowired
 	PersonRepository personRepository;
-	
-	
+
+	@RequestMapping("/persons")
+	List<Person> persons() {
+		return personRepository.findAll();
+	}
 }

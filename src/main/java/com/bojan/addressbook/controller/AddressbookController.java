@@ -12,9 +12,9 @@ public class AddressbookController {
 	@Autowired
 	PersonRepository personRepository;
 
-	@GetMapping("/")
+	@GetMapping("/addressbook-mvc")
 	public String handle(Model model) {
-		model.addAttribute("persons", personRepository.findAll());
-		return "addressbook";
+		model.addAttribute("persons", personRepository.findAll()); 
+		return "addressbook-mvc";
 	}
 }
