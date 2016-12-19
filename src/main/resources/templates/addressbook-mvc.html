@@ -7,31 +7,12 @@
 <body>
   <h1>Addressbook</h1>
 
-  <ul th:each="person : ${persons}">
+  <ul th:each="entry : ${entries}">
     <li>
-      <h2 th:text="${person.firstName + ' ' + person.lastName }">Full name</h2>
-      <h3>Numbers</h3>
-       <ul th:each="number : ${person.phones}">
+      <h2 th:text="${entry.name}"></h2>
+      <ul th:each="detail:${entry.details}">
         <li>
-         <h4 th:text="${number}">Number</h4>
-        </li>
-      </ul>
-      <h3>Email:</h3>
-       <ul th:each="email : ${person.emails}">
-        <li>
-         <h4 th:text="${email}">Email</h4>
-        </li>
-      </ul>
-      <h3>Address</h3>
-       <ul th:each="address : ${person.addresses}">
-        <li>
-         <h4 th:text="${address}">Address</h4>
-        </li>
-      </ul>
-      <h3>Note</h3>
-       <ul th:each="note : ${person.notes}">
-        <li>
-         <h4 th:text="${note}">Note</h4>
+          <h3 th:text="${detail.type + ':' + detail.value}"></h3>
         </li>
       </ul>
     </li>

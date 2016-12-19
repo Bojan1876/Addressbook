@@ -10,11 +10,11 @@ import com.bojan.addressbook.repository.PersonRepository;
 @Controller
 public class AddressbookController {
 	@Autowired
-	PersonRepository personRepository;
+	PersonRepository entryRepository;
 
 	@GetMapping("/addressbook-mvc")
 	public String handle(Model model) {
-		model.addAttribute("persons", personRepository.findAll()); 
+		model.addAttribute("entries", entryRepository.findAll()); 
 		return "addressbook-mvc";
 	}
 }
