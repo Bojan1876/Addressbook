@@ -2,28 +2,53 @@
 <html>
 <head>
 <title>Addressbook</title>
+<link rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
 <script
   src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="js/js.js"></script>
+
 </head>
 
 <body>
 
-  <h1>Addressbook</h1>
+  <h1><spam class = "glyphicon glyphicon-book"></spam>Addressbook</h1>
   <ul id="addressbook">
     <template id="personTemp">
       <li>
-        <h2>{{name}}</h2>
+        <h2><spam class = "glyphicon glyphicon-list-alt"></spam>{{name}}</h2>
+        <ul>{{phones}}</ul>
         <ul>
-          {{details}}
+          {{emails}}
+        </ul>
+        <ul>
+          {{addresses}}
+        </ul>
+        <ul>
+          {{notes}}
         </ul>
       </li>
     </template>
-    <template id="detailsTemp">
+    <template id="numberTemp">
       <li>
-        <h3>{{detailsValue}}</h3>
+        <h3><spam class = "glyphicon glyphicon-earphone"></spam>{{phone}}</h3>
       </li>
-     </template>
+    </template>
+    <template id="emailTemp">
+      <li>
+        <h3><spam class = "glyphicon glyphicon-envelope"></spam>{{email}}</h3>
+      </li>
+    </template>
+    <template id="addressTemp">
+      <li>
+        <h3><spam class = "glyphicon glyphicon-text-background"></spam>{{address}}</h3>
+      </li>
+    </template>
+    <template id="noteTemp">
+      <li>
+        <h3><spam class = "glyphicon glyphicon-text-width"></spam>{{note}}</h3>
+      </li>
+    </template>
   </ul>
 </body>
 </html>
